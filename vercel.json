@@ -1,0 +1,59 @@
+{
+  "outputDirectory": ".",
+  "buildCommand": null,
+  "installCommand": "npm install",
+  "framework": null,
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/((?!api/).*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/universities",
+      "destination": "/universities/index.html"
+    },
+    {
+      "source": "/programs",
+      "destination": "/programs/index.html"
+    }
+  ],
+  "functions": {
+    "api/lead.js": {
+      "memory": 512,
+      "maxDuration": 10
+    }
+  }
+}
