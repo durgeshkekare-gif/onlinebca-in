@@ -55,5 +55,13 @@
       "memory": 512,
       "maxDuration": 10
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "https://www.onlinebca.in/:path*",
+      "destination": "https://onlinebca.in/:path*",
+      "permanent": true
+    }
+  ],
+  "trailingSlash": false
 }
