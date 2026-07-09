@@ -56,18 +56,5 @@
       "maxDuration": 10
     }
   },
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.onlinebca.in"
-        }
-      ],
-      "destination": "https://onlinebca.in/:path*",
-      "permanent": true
-    }
-  ],
   "trailingSlash": false
 }
