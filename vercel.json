@@ -58,7 +58,13 @@
   },
   "redirects": [
     {
-      "source": "https://www.onlinebca.in/:path*",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.onlinebca.in"
+        }
+      ],
       "destination": "https://onlinebca.in/:path*",
       "permanent": true
     }
