@@ -61,5 +61,18 @@
     }
   },
   "trailingSlash": false,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.onlinebca.in"
+        }
+      ],
+      "destination": "https://onlinebca.in/:path*",
+      "permanent": true
+    }
+  ]
 }
